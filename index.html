@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="LHNO Command Helper: kopierfähige Wartungs- und Admin-Befehle für Windows, Linux, macOS, Android und iPhone." />
+  <title>LHNO Command Helper – Wartung & Administration</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+    <div class="wrap hero">
+      <div class="topline">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div>
+            <p class="eyebrow">LHNO Systems</p>
+            <h1>Command Helper</h1>
+            <p class="subtitle">Kopierfähige Befehle für Wartung, Diagnose und Administration von Windows, Linux und macOS. Android und iPhone sind bereits als spätere Bereiche vorbereitet.</p>
+          </div>
+        </div>
+        <button id="themeToggle" title="Hell/Dunkel umschalten">🌗 Design</button>
+      </div>
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Befehl, Zweck, Tag oder System suchen …" autocomplete="off" />
+        <button id="reset">Filter zurücksetzen</button>
+      </div>
+      <nav class="tabs" aria-label="Systemfilter" id="systemTabs"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="layout">
+      <aside>
+        <h2>Kategorien</h2>
+        <div class="category-list" id="categoryList"></div>
+        <div class="notice">
+          <strong>Hinweis:</strong> Befehle mit erhöhtem Risiko sind markiert. Vor destruktiven Befehlen immer Backup, Zielpfad und Auswirkungen prüfen.
+        </div>
+      </aside>
+
+      <section class="content">
+        <div class="section-title">
+          <h2 id="viewTitle">Alle Befehle</h2>
+          <span class="count" id="count"></span>
+        </div>
+        <div class="grid" id="cards"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <strong>Erweiterungsidee:</strong> Die Befehle liegen unten im JavaScript-Array <code>commands</code>. Neue Befehle können einfach als weiteres Objekt ergänzt werden. Für eine größere Sammlung kann dieses Array später in eine externe <code>commands.json</code> ausgelagert werden.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
